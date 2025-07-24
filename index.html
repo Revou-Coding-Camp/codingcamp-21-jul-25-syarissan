@@ -1,11 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-    
+    <div class="todo-container">
+        <h1>To-Do List</h1>
+
+        <!-- ✏️ Input tugas dan tanggal -->
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="Tambah tugas..." />
+            <input type="date" id="dateInput" />
+            <button id="addTask">+</button>
+        </div>
+
+        <!-- 📂 Filter status dan 🗑️ Hapus semua -->
+        <div class="button-bar">
+            <select id="filterTask">
+                <option value="filter" disabled selected>FILTER</option>
+                <option value="all">All</option>
+                <option value="pending">Pending</option>
+                <option value="done">Done</option>
+            </select>
+            <button id="deleteAll">DELETE ALL</button>
+        </div>
+
+        <!-- 📊 Tabel daftar tugas -->
+        <table id="taskTable">
+            <thead>
+                <tr>
+                    <!-- 🔄 Sort langsung di header -->
+                    <th id="sortTask">Task 🔽</th>
+                    <th id="sortDate">Due Date 🔽</th>
+                    <th id="sortStatus">Status 🔽</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="taskBody">
+                <!-- 🧾 Baris kosong jika belum ada tugas -->
+                <tr class="empty-row">
+                    <td colspan="4" style="text-align: center;">No task found</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ⚙️ Script utama -->
+    <script src="js/script.js"></script>
 </body>
+
 </html>

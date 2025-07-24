@@ -1,0 +1,217 @@
+/* === 1. RESET & GLOBAL === */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0d1117;
+    color: #cbe2ff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* === 2. CONTAINER UTAMA === */
+.todo-container {
+    width: 470px;
+    background-color: #1f2a40;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(0, 191, 255, 0.2);
+    border: 1px solid #2c3f65;
+}
+
+/* === 3. HEADING === */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00bfff;
+    text-shadow: 0 0 8px rgba(0, 191, 255, 0.6);
+}
+
+/* === 4. INPUT TUGAS & TANGGAL === */
+.input-group {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="text"],
+#dateInput {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #2c3f65;
+    border-radius: 6px;
+    background-color: #1a2435;
+    color: #cbe2ff;
+    box-sizing: border-box;
+}
+
+#taskInput {
+    flex: 2;
+    min-width: 0;
+}
+
+#dateInput {
+    width: 140px;
+}
+
+/* === 5. TOMBOL TAMBAH === */
+#addTask {
+    height: 40px;
+    padding: 0 15px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #00bfff;
+    color: #0d1117;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#addTask:hover {
+    background-color: #0095cc;
+}
+
+/* === 6. FILTER & DELETE ALL === */
+.button-bar {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#filterTask {
+    padding: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    background-color: #1a2435;
+    color: #00bfff;
+    border: 1px solid #2c3f65;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#filterTask:hover {
+    background-color: #263955;
+}
+
+#deleteAll {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff3060;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#deleteAll:hover {
+    background-color: #cc2549;
+}
+
+/* === 7. TABEL TUGAS === */
+#taskTable {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+#taskTable th,
+#taskTable td {
+    border: 1px solid #2c3f65;
+    padding: 10px;
+    text-align: left;
+}
+
+#taskTable th {
+    background-color: #263955;
+    color: #cbe2ff;
+    cursor: pointer;
+}
+
+#taskTable td {
+    background-color: #1a2435;
+    color: #cbe2ff;
+}
+
+.empty-row td {
+    font-style: italic;
+    color: #768aa7;
+    text-align: center;
+}
+
+/* === 8. ITEM TUGAS === */
+.task-check {
+    margin-right: 8px;
+}
+
+.task-label {
+    font-size: 16px;
+}
+
+.status-label {
+    font-weight: bold;
+    color: #9fdcff;
+}
+
+/* === 9. TOMBOL HAPUS PER TUGAS === */
+.delete-btn {
+    background-color: #ff3060;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #cc2549;
+}
+
+/* === 10. RESPONSIVE MODE === */
+@media (max-width: 500px) {
+    .todo-container {
+        width: 100%;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #taskInput,
+    #dateInput,
+    #addTask {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .button-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #filterTask,
+    #deleteAll {
+        width: 100%;
+    }
+
+    #taskTable th,
+    #taskTable td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .delete-btn {
+        width: 100%;
+    }
+}
