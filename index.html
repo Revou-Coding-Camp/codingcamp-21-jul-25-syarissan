@@ -12,14 +12,14 @@
     <div class="todo-container">
         <h1>To-Do List</h1>
 
-        <!-- ✏️ Input tugas dan tanggal -->
+        <!-- Input tugas dan tanggal -->
         <div class="input-group">
             <input type="text" id="taskInput" placeholder="Tambah tugas..." />
             <input type="date" id="dateInput" />
             <button id="addTask">+</button>
         </div>
 
-        <!-- 📂 Filter status dan 🗑️ Hapus semua -->
+        <!-- Filter status dan Hapus semua -->
         <div class="button-bar">
             <select id="filterTask">
                 <option value="filter" disabled selected>FILTER</option>
@@ -30,11 +30,11 @@
             <button id="deleteAll">DELETE ALL</button>
         </div>
 
-        <!-- 📊 Tabel daftar tugas -->
+        <!-- Tabel daftar tugas -->
         <table id="taskTable">
             <thead>
                 <tr>
-                    <!-- 🔄 Sort langsung di header -->
+                    <!-- Sort langsung di header -->
                     <th id="sortTask">Task 🔽</th>
                     <th id="sortDate">Due Date 🔽</th>
                     <th id="sortStatus">Status 🔽</th>
@@ -42,7 +42,7 @@
                 </tr>
             </thead>
             <tbody id="taskBody">
-                <!-- 🧾 Baris kosong jika belum ada tugas -->
+                <!-- Baris kosong jika belum ada tugas -->
                 <tr class="empty-row">
                     <td colspan="4" style="text-align: center;">No task found</td>
                 </tr>
@@ -50,7 +50,7 @@
         </table>
     </div>
 
-    <!-- ⚙️ Script utama -->
+    <!-- Script utama -->
     <script src="js/script.js"></script>
 </body>
 
