@@ -41,7 +41,7 @@ addBtn.addEventListener("click", function () {
         </td>
         <td>${dateValue}</td>
         <td><span class="status-label">Pending</span></td>
-        <td><button class="delete-btn">Hapus</button></td>
+        <td><button class="delete-btn">Delete</button></td>
     `;
 
     // === 3a. Checklist toggle: ubah status ===
